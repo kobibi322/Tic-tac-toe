@@ -9,8 +9,8 @@ from functions import (
 
 def manager():
     player = "X"
-    board = [None, None, None, None, None, None, None, None, None]
-    board_to_show = ["   ", "   ", "   ", "   ", "   ", "   ", "   ", "   ", "   "]
+    board = [None] * 9
+    board_to_show = ["   "] * 9
     for turn in range(9):
         finish = False
         while not finish:
