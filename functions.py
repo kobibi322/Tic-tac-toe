@@ -44,5 +44,5 @@ def is_winner(board, player):
             ]
     for line in WINNING_LINES:
         first, second, third = line
-        if board[first] == player and board[first] == board[second] and board[second] == board[third]:
+        if board[first] == board[second] == board[third] == player:
             return True
