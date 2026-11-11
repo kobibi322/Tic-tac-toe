@@ -1,10 +1,17 @@
-from functions import *
+from functions import (
+    display_board, 
+    print_win_results, 
+    print_draw_results, 
+    input_player, 
+    turn_of, 
+    is_winner
+)
 
 def manager():
     player = "X"
     board = [None, None, None, None, None, None, None, None, None]
     board_to_show = ["   ", "   ", "   ", "   ", "   ", "   ", "   ", "   ", "   "]
-    for i in range(len(board)):
+    for turn in range(9):
         finish = False
         while not finish:
             display_board(board_to_show)
