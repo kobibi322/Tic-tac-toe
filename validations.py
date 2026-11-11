@@ -1,7 +1,7 @@
 def validate_choice(choice, board):
     try:
         val = int(choice)
-    except (ValueError):
+    except ValueError:
         raise ValueError("choice is not integer")
     else:
         if val > 9 or val < 1:
