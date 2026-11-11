@@ -1,8 +1,8 @@
 from validations import validate_choice
 
 # prints
-def display_board(board):
-    b = board
+def display_board(board_to_show):
+    b = board_to_show
     print(f"""
  [1]{b[0]}| [2]{b[1]}| [3]{b[2]}
 -------+-------+-------
@@ -11,12 +11,12 @@ def display_board(board):
  [7]{b[6]}| [8]{b[7]}| [9]{b[8]}
 """)
 
-def print_win_results(board, player):
-        display_board(board)
+def print_win_results(board_to_show, player):
+        display_board(board_to_show)
         print(f"Player {player} wins!")
 
-def print_draw_results(board):
-    display_board(board)
+def print_draw_results(board_to_show):
+    display_board(board_to_show)
     print("It's a draw!")
 
 # input   
@@ -44,5 +44,5 @@ def is_winner(board, player):
             ]
     for line in WINNING_LINES:
         first, second, third = line
-        if board[first].strip() == player and board[first].strip() == board[second].strip() and board[second].strip() == board[third].strip():
+        if board[first] == player and board[first] == board[second] and board[second] == board[third]:
             return True
